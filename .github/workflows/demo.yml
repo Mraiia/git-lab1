@@ -7,5 +7,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello Git"
+      - name: Create HTML file
+        run: |
+          echo "<!DOCTYPE html>" > index.html
+          echo "<html>" >> index.html
+          echo "<head><title>CI Demo</title></head>" >> index.html
+          echo "<body><h1>Hello from GitHub Actions 🚀</h1></body>" >> index.html
+          echo "</html>" >> index.html
+
+      - name: Show file content
+        run: cat index.html
+
+
+
